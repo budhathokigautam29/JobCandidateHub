@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "JobCandidateHubAPI.Interfaces/1.0.0": {
+        "dependencies": {
+          "JobCandidateHubAPI.ViewModels": "1.0.0"
+        },
+        "runtime": {
+          "JobCandidateHubAPI.Interfaces.dll": {}
+        }
+      },
+      "JobCandidateHubAPI.ViewModels/1.0.0": {
+        "runtime": {
+          "JobCandidateHubAPI.ViewModels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JobCandidateHubAPI.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JobCandidateHubAPI.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

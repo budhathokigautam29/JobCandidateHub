@@ -1,0 +1,14 @@
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\bin\Debug\net8.0\JobCandidateHubAPI.ViewModels.exe
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\bin\Debug\net8.0\JobCandidateHubAPI.ViewModels.deps.json
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\bin\Debug\net8.0\JobCandidateHubAPI.ViewModels.runtimeconfig.json
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\bin\Debug\net8.0\JobCandidateHubAPI.ViewModels.dll
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\bin\Debug\net8.0\JobCandidateHubAPI.ViewModels.pdb
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\JobCandidateHubAPI.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\JobCandidateHubAPI.ViewModels.AssemblyInfoInputs.cache
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\JobCandidateHubAPI.ViewModels.AssemblyInfo.cs
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\JobCandidateHubAPI.ViewModels.csproj.CoreCompileInputs.cache
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\JobCandidateHubAPI.ViewModels.dll
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\refint\JobCandidateHubAPI.ViewModels.dll
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\JobCandidateHubAPI.ViewModels.pdb
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\JobCandidateHubAPI.ViewModels.genruntimeconfig.cache
+D:\SigmaSoftware\JobCandidateHubAPI.ViewModels\obj\Debug\net8.0\ref\JobCandidateHubAPI.ViewModels.dll

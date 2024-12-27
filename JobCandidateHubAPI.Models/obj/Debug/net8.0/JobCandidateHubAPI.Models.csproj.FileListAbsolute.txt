@@ -1,0 +1,14 @@
+D:\SigmaSoftware\JobCandidateHubAPI.Models\bin\Debug\net8.0\JobCandidateHubAPI.Models.exe
+D:\SigmaSoftware\JobCandidateHubAPI.Models\bin\Debug\net8.0\JobCandidateHubAPI.Models.deps.json
+D:\SigmaSoftware\JobCandidateHubAPI.Models\bin\Debug\net8.0\JobCandidateHubAPI.Models.runtimeconfig.json
+D:\SigmaSoftware\JobCandidateHubAPI.Models\bin\Debug\net8.0\JobCandidateHubAPI.Models.dll
+D:\SigmaSoftware\JobCandidateHubAPI.Models\bin\Debug\net8.0\JobCandidateHubAPI.Models.pdb
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\JobCandidateHubAPI.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\JobCandidateHubAPI.Models.AssemblyInfoInputs.cache
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\JobCandidateHubAPI.Models.AssemblyInfo.cs
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\JobCandidateHubAPI.Models.csproj.CoreCompileInputs.cache
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\JobCandidateHubAPI.Models.dll
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\refint\JobCandidateHubAPI.Models.dll
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\JobCandidateHubAPI.Models.pdb
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\JobCandidateHubAPI.Models.genruntimeconfig.cache
+D:\SigmaSoftware\JobCandidateHubAPI.Models\obj\Debug\net8.0\ref\JobCandidateHubAPI.Models.dll

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JobCandidateHubAPI.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa22b66c2a4388b725befaf5c044ee4e0e84b8c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22dc669f19dd5e60d15ffe93cf1ed6ee09f2419c")]
 [assembly: System.Reflection.AssemblyProductAttribute("JobCandidateHubAPI.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JobCandidateHubAPI.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

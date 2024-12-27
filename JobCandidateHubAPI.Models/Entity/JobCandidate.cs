@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace JobCandidateHubAPI.Models.Entity
 {
-    public class JobCandidate: BaseModel
+    public class JobCandidate : BaseModel
     {
         public int JobCandidateId { get; set; }
         public string FirstName { get; set; } = string.Empty;
@@ -17,5 +17,6 @@ namespace JobCandidateHubAPI.Models.Entity
         public string TimeInterval { get; set; } = string.Empty;
         public string LinkedInUrl { get; set; } = string.Empty;
         public string GitHubUrl { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty;
     }
 }

@@ -16,6 +16,7 @@ namespace JobCandidateHubAPI.ViewModels.JobCandidate
         public string TimeInterval { get; set; } = string.Empty;
         public string LinkedInUrl { get; set; } = string.Empty;
         public string GitHubUrl { get; set; } = string.Empty;
+        public string Comment { get; set; } = string.Empty;
         public int CreatedBy { get; set; }
         public int UpdatedBy { get; set; }
         public DateTime CreatedTs { get; set; }

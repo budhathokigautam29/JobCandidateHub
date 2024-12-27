@@ -26,7 +26,7 @@ namespace JobCandidateHubAPI.Controllers
             return Ok(new { success = true, jobCandidateVM });
 
         }
-        
+
         [HttpGet("GetById")]
         public async Task<IActionResult> GetById(int id)
         {
@@ -35,10 +35,29 @@ namespace JobCandidateHubAPI.Controllers
                 return Ok(new { success = false, message = "No job candidate found" });
             return Ok(new { success = true, jobCandidateVM });
         }
-        
+
         [HttpPost("Create")]
         public async Task<IActionResult> Create(JobCandidateViewModel jobCandidateVM)
         {
+            if (string.IsNullOrEmpty(jobCandidateVM.FirstName))
+            {
+                return Ok(new { success = false, message = "First Name is required" });
+            }
+            else if (string.IsNullOrEmpty(jobCandidateVM.FirstName))
+            {
+                return Ok(new { success = false, message = "Last Name is required" });
+            }
+            else if (string.IsNullOrEmpty(jobCandidateVM.Email))
+            {
+                return Ok(new { success = false, message = "Emial is required" });
+
+            }
+            else if (string.IsNullOrEmpty(jobCandidateVM.Comment))
+            {
+                return Ok(new { success = false, message = "comment is required" });
+
+            }
+
             int jobCandidateId = await _jobCandidateService.CreateAsync(jobCandidateVM);
             if (jobCandidateId > 0)
                 return Ok(new { success = true, message = "Job Candidate created successfully", jobCandidateId });
@@ -51,9 +70,28 @@ namespace JobCandidateHubAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, JobCandidateViewModel jobCandidateVM)
         {
+            if (string.IsNullOrEmpty(jobCandidateVM.FirstName))
+            {
+                return Ok(new { success = false, message = "First Name is required" });
+            }
+            else if (string.IsNullOrEmpty(jobCandidateVM.FirstName))
+            {
+                return Ok(new { success = false, message = "Last Name is required" });
+            }
+            else if (string.IsNullOrEmpty(jobCandidateVM.Email))
+            {
+                return Ok(new { success = false, message = "Emial is required" });
+
+            }
+            else if (string.IsNullOrEmpty(jobCandidateVM.Comment))
+            {
+                return Ok(new { success = false, message = "comment is required" });
+
+            }
+
             int result = await _jobCandidateService.UpdateAsync(id, jobCandidateVM);
             if (result > 0)
-                return Ok(new { success = true, message = "Job Candidate edited successfully" });            
+                return Ok(new { success = true, message = "Job Candidate edited successfully" });
             else
                 return StatusCode(StatusCodes.Status404NotFound, new { success = false, message = "Unable to edit Job Candidate" });
         }

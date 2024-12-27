@@ -30,6 +30,7 @@ namespace JobCandidateHubAPI.Services
                              , TimeInterval
                              , LinkedInUrl
                              , GitHubUrl
+                             , Comment
                              , CreatedBy
                              , UpdatedBy
                              , CreatedTs
@@ -58,6 +59,7 @@ namespace JobCandidateHubAPI.Services
                               , TimeInterval
                               , LinkedInUrl
                               , GitHubUrl
+                              , Comment
                               , CreatedBy
                               , UpdatedBy
                               , CreatedTs
@@ -93,6 +95,7 @@ namespace JobCandidateHubAPI.Services
                             , TimeInterval
                             , LinkedInUrl
                             , GitHubUrl
+                            , Comment
                             , CreatedBy
                             , UpdatedBy
                             , CreatedTs
@@ -107,6 +110,7 @@ namespace JobCandidateHubAPI.Services
                             , @TimeInterval
                             , @LinkedInUrl
                             , @GitHubUrl
+                            , @Comment
                             , @CreatedBy
                             , @UpdatedBy
                             , @CreatedTs
@@ -125,6 +129,7 @@ namespace JobCandidateHubAPI.Services
             parameters.Add("@TimeInterval", jobCandidateVM.TimeInterval, DbType.String);
             parameters.Add("@LinkedInUrl", jobCandidateVM.LinkedInUrl, DbType.String);
             parameters.Add("@GitHubUrl", jobCandidateVM.GitHubUrl, DbType.String);
+            parameters.Add("@Comment", jobCandidateVM.Comment, DbType.String);
             parameters.Add("@CreatedBy", jobCandidateVM.CreatedBy, DbType.String);
             parameters.Add("@UpdatedBy", jobCandidateVM.UpdatedBy, DbType.Int32);
             parameters.Add("@CreatedTs", jobCandidateVM.CreatedTs, DbType.DateTime);
@@ -161,6 +166,7 @@ namespace JobCandidateHubAPI.Services
                         , TimeInterval		= @TimeInterval
                         , LinkedInUrl		= @LinkedInUrl
                         , GitHubUrl			= @GitHubUrl
+                        , Comment           = @Comment
                         , CreatedBy			= @CreatedBy
                         , UpdatedBy			= @UpdatedBy
                         , CreatedTs			= @CreatedTs
@@ -179,6 +185,7 @@ namespace JobCandidateHubAPI.Services
             parameters.Add("@TimeInterval", jobCandidateViewModel.TimeInterval, DbType.String);
             parameters.Add("@LinkedInUrl", jobCandidateViewModel.LinkedInUrl, DbType.String);
             parameters.Add("@GitHubUrl", jobCandidateViewModel.GitHubUrl, DbType.String);
+            parameters.Add("@Comment", jobCandidateViewModel.Comment, DbType.String);
             parameters.Add("@CreatedBy", jobCandidateViewModel.CreatedBy, DbType.String);
             parameters.Add("@UpdatedBy", jobCandidateViewModel.UpdatedBy, DbType.Int32);
             parameters.Add("@CreatedTs", jobCandidateViewModel.CreatedTs, DbType.DateTime);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj": {}
+    "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj": {}
   },
   "projects": {
-    "D:\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj": {
+    "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj",
+        "projectUniqueName": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj",
         "projectName": "JobCandidateHubAPI.Models",
-        "projectPath": "D:\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj",
+        "projectPath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "D:\\SigmaSoftware\\JobCandidateHubAPI.Models\\obj\\",
+        "outputPath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1762,11 +1762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SigmaSoftware\\JobCandidateHubAPI.Services\\JobCandidateHubAPI.Services.csproj",
+      "projectUniqueName": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Services\\JobCandidateHubAPI.Services.csproj",
       "projectName": "JobCandidateHubAPI.Services",
-      "projectPath": "D:\\SigmaSoftware\\JobCandidateHubAPI.Services\\JobCandidateHubAPI.Services.csproj",
+      "projectPath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Services\\JobCandidateHubAPI.Services.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "D:\\SigmaSoftware\\JobCandidateHubAPI.Services\\obj\\",
+      "outputPath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1784,11 +1784,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\SigmaSoftware\\JobCandidateHubAPI.Interfaces\\JobCandidateHubAPI.Interfaces.csproj": {
-              "projectPath": "D:\\SigmaSoftware\\JobCandidateHubAPI.Interfaces\\JobCandidateHubAPI.Interfaces.csproj"
+            "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Interfaces\\JobCandidateHubAPI.Interfaces.csproj": {
+              "projectPath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Interfaces\\JobCandidateHubAPI.Interfaces.csproj"
             },
-            "D:\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\JobCandidateHubAPI.ViewModels.csproj": {
-              "projectPath": "D:\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\JobCandidateHubAPI.ViewModels.csproj"
+            "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\JobCandidateHubAPI.ViewModels.csproj": {
+              "projectPath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\JobCandidateHubAPI.ViewModels.csproj"
             }
           }
         }

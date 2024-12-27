@@ -21,12 +21,25 @@ namespace JobCandidateHubAPI.Services
 
         public async Task<ICollection<JobCandidateViewModel>> GetAllAsync()
         {
-            StringBuilder strSql = new StringBuilder(@"");
+            string strSql = @"SELECT 
+                             JobCandidateId
+                             , FirstName
+                             , LastName
+                             , Email
+                             , PhoneNumber
+                             , TimeInterval
+                             , LinkedInUrl
+                             , GitHubUrl
+                             , CreatedBy
+                             , UpdatedBy
+                             , CreatedTs
+                             , UpdatedTs
+                             FROM JobCandidate";
             try
             {
                 using var con = await _db.CreateConnectionAsync();
 
-                var jobCandidate = await con.QueryAsync<JobCandidateViewModel>(strSql.ToString());
+                var jobCandidate = await con.QueryAsync<JobCandidateViewModel>(strSql);
                 return jobCandidate.AsList();
             }
             catch (Exception ex)
@@ -36,10 +49,24 @@ namespace JobCandidateHubAPI.Services
         }
         public async Task<JobCandidateViewModel> GetByIdAsync(int id)
         {
-            string strSql = @"";
+            string strSql = @"SELECT 
+                              JobCandidateId
+                              , FirstName
+                              , LastName
+                              , Email
+                              , PhoneNumber
+                              , TimeInterval
+                              , LinkedInUrl
+                              , GitHubUrl
+                              , CreatedBy
+                              , UpdatedBy
+                              , CreatedTs
+                              , UpdatedTs
+                              FROM JobCandidate
+                              WHERE JobCandidateId = @JobCandidateId";
 
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("UserId", id, DbType.Int32);
+            parameters.Add("JobCandidateId", id, DbType.Int32);
 
             try
             {
@@ -57,22 +84,51 @@ namespace JobCandidateHubAPI.Services
         public async Task<int> CreateAsync(JobCandidateViewModel jobCandidateVM)
         {
 
-            var sqlQuery = @"
-					SELECT
-						SCOPE_IDENTITY()";
+            var sqlQuery = @"INSERT INTO JobCandidate 
+                            (
+                             FirstName
+                            , LastName
+                            , Email
+                            , PhoneNumber
+                            , TimeInterval
+                            , LinkedInUrl
+                            , GitHubUrl
+                            , CreatedBy
+                            , UpdatedBy
+                            , CreatedTs
+                            , UpdatedTs
+                            )
+                            VALUES
+                            (
+                             @FirstName
+                            , @LastName
+                            , @Email
+                            , @PhoneNumber
+                            , @TimeInterval
+                            , @LinkedInUrl
+                            , @GitHubUrl
+                            , @CreatedBy
+                            , @UpdatedBy
+                            , @CreatedTs
+                            , @UpdatedTs
+                            )
+					        SELECT
+					        	SCOPE_IDENTITY()";
 
             jobCandidateVM.CreatedTs = DateTime.UtcNow;
+            jobCandidateVM.CreatedBy = 1; // since we dont have users for now hardcoded value : 1
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("FirstName", jobCandidateVM.FirstName, DbType.String);
-            parameters.Add("LastName", jobCandidateVM.LastName, DbType.String);
-            parameters.Add("Email", jobCandidateVM.Email, DbType.String);
-            parameters.Add("TimeInterval", jobCandidateVM.TimeInterval, DbType.String);
-            parameters.Add("CreatedBy", jobCandidateVM.CreatedBy, DbType.String);
-            parameters.Add("PhoneNumber", jobCandidateVM.PhoneNumber, DbType.Double);
-            parameters.Add("CreatedBy", jobCandidateVM.CreatedBy, DbType.Int32);
-            parameters.Add("UpdatedBy", jobCandidateVM.UpdatedBy, DbType.Int32);
-            parameters.Add("CreatedTs", jobCandidateVM.CreatedTs, DbType.DateTime);
-            parameters.Add("UpdatedTs", jobCandidateVM.UpdatedTs, DbType.DateTime);
+            parameters.Add("@FirstName", jobCandidateVM.FirstName, DbType.String);
+            parameters.Add("@LastName", jobCandidateVM.LastName, DbType.String);
+            parameters.Add("@Email", jobCandidateVM.Email, DbType.String);
+            parameters.Add("@PhoneNumber", jobCandidateVM.PhoneNumber, DbType.String);
+            parameters.Add("@TimeInterval", jobCandidateVM.TimeInterval, DbType.String);
+            parameters.Add("@LinkedInUrl", jobCandidateVM.LinkedInUrl, DbType.String);
+            parameters.Add("@GitHubUrl", jobCandidateVM.GitHubUrl, DbType.String);
+            parameters.Add("@CreatedBy", jobCandidateVM.CreatedBy, DbType.String);
+            parameters.Add("@UpdatedBy", jobCandidateVM.UpdatedBy, DbType.Int32);
+            parameters.Add("@CreatedTs", jobCandidateVM.CreatedTs, DbType.DateTime);
+            parameters.Add("@UpdatedTs", jobCandidateVM.UpdatedTs, DbType.DateTime);
 
             try
             {
@@ -88,37 +144,70 @@ namespace JobCandidateHubAPI.Services
         public async Task<int> UpdateAsync(int jobCandidateId, JobCandidateViewModel jobCandidateViewModel)
         {
             string strSql = @"
-                    IF EXISTS (SELECT AgentId 
-                    FROM Agent
+                    IF EXISTS (SELECT JobCandidateId 
+                    FROM JobCandidate
                     WHERE [Email] = @Email
-		                    AND AgentId != @AgentId)
+		                    AND JobCandidateId != @JobCandidateId)
                     BEGIN
 	                    SELECT -1
                     END
                     ELSE BEGIN
-	                    
-                        SELECT @AgentId
+	                    UPDATE JobCandidate
+                        SET 
+                         FirstName			=@FirstName
+                        , LastName			= @LastName
+                        , Email				= @Email
+                        , PhoneNumber		= @PhoneNumber
+                        , TimeInterval		= @TimeInterval
+                        , LinkedInUrl		= @LinkedInUrl
+                        , GitHubUrl			= @GitHubUrl
+                        , CreatedBy			= @CreatedBy
+                        , UpdatedBy			= @UpdatedBy
+                        , CreatedTs			= @CreatedTs
+                        , UpdatedTs			= @UpdatedTs
+                        WHERE JobCandidateId = @JobCandidateId
+                        SELECT @JobCandidateId
                     END";
 
             jobCandidateViewModel.UpdatedTs = DateTime.UtcNow;
             DynamicParameters parameters = new DynamicParameters();
-            parameters.Add("FirstName", jobCandidateViewModel.FirstName, DbType.String);
-            parameters.Add("LastName", jobCandidateViewModel.LastName, DbType.String);
-            parameters.Add("Email", jobCandidateViewModel.Email, DbType.String);
-            parameters.Add("TimeInterval", jobCandidateViewModel.TimeInterval, DbType.String);
-            parameters.Add("CreatedBy", jobCandidateViewModel.CreatedBy, DbType.String);
-            parameters.Add("PhoneNumber", jobCandidateViewModel.PhoneNumber, DbType.Double);
-            parameters.Add("CreatedBy", jobCandidateViewModel.CreatedBy, DbType.Int32);
-            parameters.Add("UpdatedBy", jobCandidateViewModel.UpdatedBy, DbType.Int32);
-            parameters.Add("CreatedTs", jobCandidateViewModel.CreatedTs, DbType.DateTime);
-            parameters.Add("UpdatedTs", jobCandidateViewModel.UpdatedTs, DbType.DateTime);
+            parameters.Add("@JobCandidateId", jobCandidateId, DbType.Int32);
+            parameters.Add("@FirstName", jobCandidateViewModel.FirstName, DbType.String);
+            parameters.Add("@LastName", jobCandidateViewModel.LastName, DbType.String);
+            parameters.Add("@Email", jobCandidateViewModel.Email, DbType.String);
+            parameters.Add("@PhoneNumber", jobCandidateViewModel.PhoneNumber, DbType.String);
+            parameters.Add("@TimeInterval", jobCandidateViewModel.TimeInterval, DbType.String);
+            parameters.Add("@LinkedInUrl", jobCandidateViewModel.LinkedInUrl, DbType.String);
+            parameters.Add("@GitHubUrl", jobCandidateViewModel.GitHubUrl, DbType.String);
+            parameters.Add("@CreatedBy", jobCandidateViewModel.CreatedBy, DbType.String);
+            parameters.Add("@UpdatedBy", jobCandidateViewModel.UpdatedBy, DbType.Int32);
+            parameters.Add("@CreatedTs", jobCandidateViewModel.CreatedTs, DbType.DateTime);
+            parameters.Add("@UpdatedTs", jobCandidateViewModel.UpdatedTs, DbType.DateTime);
             try
             {
                 using var con = await _db.CreateConnectionAsync();
                 return await con.ExecuteScalarAsync<int>(strSql, parameters);
             }
             catch (Exception ex)
-            {                
+            {
+                return 0;
+            }
+        }
+        public async Task<int> DeleteAsync(int jobCandidateId)
+        {
+            string strSql = @"                    
+	                    DELETE FROM JobCandidate
+                        WHERE JobCandidateId = @JobCandidateId
+                        SELECT @JobCandidateId";
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@JobCandidateId", jobCandidateId, DbType.Int32);
+            try
+            {
+                using var con = await _db.CreateConnectionAsync();
+                return await con.ExecuteScalarAsync<int>(strSql, parameters);
+            }
+            catch (Exception ex)
+            {
                 return 0;
             }
         }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\JobCandidateHubAPI.ViewModels.csproj",
+      "projectUniqueName": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\JobCandidateHubAPI.ViewModels.csproj",
       "projectName": "JobCandidateHubAPI.ViewModels",
-      "projectPath": "D:\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\JobCandidateHubAPI.ViewModels.csproj",
+      "projectPath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\JobCandidateHubAPI.ViewModels.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "D:\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\obj\\",
+      "outputPath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.ViewModels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",

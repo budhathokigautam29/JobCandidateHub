@@ -12,7 +12,7 @@ namespace JobCandidateHubAPI.Models.Entity
         public int JobCandidateId { get; set; }
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
-        public double PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
         public string TimeInterval { get; set; } = string.Empty;
         public string LinkedInUrl { get; set; } = string.Empty;

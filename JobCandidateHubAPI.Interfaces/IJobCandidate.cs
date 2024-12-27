@@ -13,5 +13,6 @@ namespace JobCandidateHubAPI.Interfaces
         Task<JobCandidateViewModel> GetByIdAsync(int id);
         Task<int> CreateAsync(JobCandidateViewModel jobCandidateViewModel);
         Task<int> UpdateAsync(int jobCandidateId, JobCandidateViewModel jobCandidateViewModel);
+        Task<int> DeleteAsync(int id);
     }
 }

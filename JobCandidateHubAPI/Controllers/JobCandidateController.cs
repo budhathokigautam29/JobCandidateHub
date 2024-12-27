@@ -57,11 +57,15 @@ namespace JobCandidateHubAPI.Controllers
             else
                 return StatusCode(StatusCodes.Status404NotFound, new { success = false, message = "Unable to edit Job Candidate" });
         }
-        
-        //[HttpPost("Delete")]
-        //public async Task<IActionResult> Delete()
-        //{
 
-        //}
+        [HttpPost("Delete")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            int result = await _jobCandidateService.DeleteAsync(id);
+            if (result > 0)
+                return Ok(new { success = true, message = "Job Candidate deleted successfully" });
+            else
+                return StatusCode(StatusCodes.Status404NotFound, new { success = false, message = "Unable to delete Job Candidate" });
+        }
     }
 }

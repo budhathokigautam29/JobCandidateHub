@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6y9JGH8AMqY=",
+  "dgSpecHash": "naHgcsdhmjU=",
   "success": true,
-  "projectFilePath": "D:\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj",
+  "projectFilePath": "D:\\TestAPI\\SigmaSoftware\\JobCandidateHubAPI.Models\\JobCandidateHubAPI.Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
